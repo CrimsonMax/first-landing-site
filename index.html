@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>One Hour Site</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>itProger</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Stuffs" onclick="slowScroll('#main')">Stuffs</a>
+            <a href="#" title="Bonuses" onclick="slowScroll('#overview')">Bonuses</a>
+            <a href="#" title="Contacts" onclick="slowScroll('#contacts')">Contacts</a>
+            <a href="#" title="FAQ" onclick="slowScroll('#faq')">FAQ</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Programming</h1>
+        <h3>is a Life!</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>We will help You!</h2>
+            <span>A lot of everything that You need!</span>
+        </div>
+        <div class="text">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quasi minima incidunt architecto
+                corrupti delectus aperiam, voluptates ipsa repudiandae dolore esse accusantium eveniet minus mollitia
+                doloremque dicta exercitationem amet repellat.</span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Bonuses</h2>
+        <h4>all is simplier with us</h4>
+
+        <div class="img">
+            <img src="https://ak.picdn.net/shutterstock/videos/670426/thumb/1.jpg" alt="" srcset="">
+            <span>Ruby for dummies</span>
+        </div>
+        <div class="img">
+            <img src="https://freesoft.ru/storage/images/news/3/23/2222/2222_text.png" alt="" srcset="">
+            <span>PhotoShop for dummies</span>
+        </div>
+        <div class="img">
+            <img src="https://s3.tproger.ru/uploads/2017/10/ac8df699d5e34e16b2c3c0d9f97961631.jpg" alt="" srcset="">
+            <span>Swift for dummies</span>
+        </div>
+        <div class="img">
+            <img src="https://linux-notes.org/wp-content/uploads/2017/04/Pereklyuchit-versiyu-python-v-UnixLinux.jpg"
+                alt="" srcset="">
+            <span>Creating games using Python</span>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <center>
+            <h5>Your opinion</h5>
+        </center>
+        <form action="" id="form_input">
+            <label for="name">Name <span>*</span></label><br>
+            <input type="text" name="name" id="name" placeholder="Name"><br>
+            <label for="email">Email <span>*</span></label><br>
+            <input type="email" name="emai" id="email" placeholder="aaaaa@aaa.com"><br>
+            <label for="message">Message <span>*</span></label><br>
+            <textarea name="message" id="message" cols="40" rows="5" placeholder="Write here"></textarea><br>
+            <div id="mess_send" class="btn">Send</div>
+        </form>
+    </div>
+
+    <div id="faq">
+        <div>
+            <span class="title">Payment</span><br>
+            <span class="heading">How to pay?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem ducimus maxime, molestias similique assumenda odio dolor expedita eum maiores.</p>
+            <span class="heading">How to pay?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem ducimus maxime, molestias similique assumenda odio dolor expedita eum maiores.</p>
+            <span class="heading">How to pay?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem ducimus maxime, molestias similique assumenda odio dolor expedita eum maiores.</p>
+        </div>
+        <div>
+            <span class="title">Info</span><br>
+            <span class="heading">How to ifo?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem ducimus maxime, molestias similique assumenda odio dolor expedita eum maiores.</p>
+            <span class="heading">How to info?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem ducimus maxime, molestias similique assumenda odio dolor expedita eum maiores.</p>
+            <span class="heading">How to info?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem ducimus maxime, molestias similique assumenda odio dolor expedita eum maiores.</p>
+        </div>
+        <div>
+            <span class="title">Warraty</span><br>
+            <span class="heading">How to fix?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem ducimus maxime, molestias similique assumenda odio dolor expedita eum maiores.</p>
+            <span class="heading">How to fix?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem ducimus maxime, molestias similique assumenda odio dolor expedita eum maiores.</p>
+            <span class="heading">How to fix?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur exercitationem ducimus maxime, molestias similique assumenda odio dolor expedita eum maiores.</p>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if ($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+        });
+    </script>
+</body>
+
+</html>
